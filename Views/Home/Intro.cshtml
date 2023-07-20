@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Intro";
+}
+@model MyMvcApp.Models.FormData
+<div class="text-center">
+    <h3 >Babita Rawat</h3>
+     <p  >#A00280963</p>
+     <!-- Using a form submission to navigate to another page -->
+     <form asp-controller="Home" asp-action="Intro" method="post">
+    <div class="inputDiv">
+        <label for="Number1">Number 1:</label>
+        <input type="number" name="Number1" id="Number1" value="@Model.Number1" />
+    </div>
+    <div class="inputDiv">
+        <label for="Number2">Number 2:</label>
+        <input type="number" name="Number2" id="Number2" value="@Model.Number2" />
+    </div>
+    <div class="inputDiv">
+        <label for="Result">Result:</label>
+        <output name="Result" id="Result">@Model.Result</output>
+    </div>
+    <button type="submit" class="btn settingBtn">Calculate</button>
+      <a asp-action="Index" asp-controller="Home" class="btn backBtn">Go To Home</a>
+
+    </form>
+
+    </div>
+
+
+
